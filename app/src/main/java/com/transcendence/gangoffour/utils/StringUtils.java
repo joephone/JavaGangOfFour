@@ -1,4 +1,4 @@
-package com.transcendence.gangoffour;
+package com.transcendence.gangoffour.utils;
 
 import android.content.Context;
 

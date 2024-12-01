@@ -1,4 +1,4 @@
-package com.transcendence.gangoffour;
+package com.transcendence.gangoffour.creational;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,17 +9,21 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.transcendence.gangoffour.main.AppConstantValue;
+import com.transcendence.gangoffour.R;
+import com.transcendence.gangoffour.utils.StringUtils;
+
 import java.util.List;
 
 /**
- * @author Joephone on 2024/12/1 0:45
+ * @author Joephone on 2024/12/1 0:38
  * @E-Mail Address：joephonechen@gmail.com
- * @Desc 结构型模式
+ * @Desc 创建型模式
  * @Edition 1.0
  * @EditionHistory
  */
 
-public class MainStructuralActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class MainCreationalActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private final String TAG = "wan";
 
     private ArrayAdapter<String> adapter;
@@ -44,7 +48,7 @@ public class MainStructuralActivity extends AppCompatActivity implements Adapter
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent();
-        intent.setClass(this, AppConstantValue.mainPatterns[position]);
+        intent.setClass(this, AppConstantValue.mainPatternsCreational[position]);
         startActivity(intent);
     }
 }

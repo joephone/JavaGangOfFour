@@ -22,6 +22,13 @@
         <item>Prototype 原型模式</item>
     </string-array>
 
+    <string-array name="index_patterns_creational_singleton">
+        <item>饿汉式（Eager Initialization）</item>
+        <item>懒汉式（Lazy Initialization）</item>
+        <item>线程安全的懒汉式（双重检查锁定）</item>
+        <item>静态内部类实现的懒汉式（推荐）</item>
+    </string-array>
+
     <string-array name="index_patterns_structural">
         <item>Singleton 单例模式</item>
         <item>Factory Method 工厂方法模式</item>

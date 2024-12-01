@@ -1,8 +1,6 @@
-package com.transcendence.gangoffour;
+package com.transcendence.gangoffour.main;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +8,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.transcendence.gangoffour.R;
+import com.transcendence.gangoffour.main.AppConstantValue;
+import com.transcendence.gangoffour.utils.StringUtils;
 
 import java.util.List;
 

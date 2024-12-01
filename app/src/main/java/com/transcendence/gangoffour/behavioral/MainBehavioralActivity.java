@@ -1,4 +1,4 @@
-package com.transcendence.gangoffour;
+package com.transcendence.gangoffour.behavioral;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.transcendence.gangoffour.main.AppConstantValue;
+import com.transcendence.gangoffour.R;
+import com.transcendence.gangoffour.utils.StringUtils;
 
 import java.util.List;
 

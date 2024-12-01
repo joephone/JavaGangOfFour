@@ -17,7 +17,7 @@
         android:theme="@style/Theme.AidlTest"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -28,15 +28,21 @@
         </activity>
 
         <activity
-            android:name=".MainCreationalActivity"
+            android:name=".creational.MainCreationalActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".MainStructuralActivity"
+            android:name=".creational.singleton.MainSingletonActivity"
+            android:screenOrientation="portrait" />
+
+
+
+        <activity
+            android:name=".structural.MainStructuralActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".MainBehavioralActivity"
+            android:name=".behavioral.MainBehavioralActivity"
             android:screenOrientation="portrait" />
     </application>
 
