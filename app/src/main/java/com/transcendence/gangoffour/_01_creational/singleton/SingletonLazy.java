@@ -1,4 +1,4 @@
-package com.transcendence.gangoffour.creational.singleton;
+package com.transcendence.gangoffour._01_creational.singleton;
 
 
 /**

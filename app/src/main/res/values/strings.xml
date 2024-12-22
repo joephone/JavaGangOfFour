@@ -9,17 +9,17 @@
 
 
     <string-array name="index_patterns">
-        <item>创建型模式 (Creational Patterns)</item>
-        <item>结构型模式 (Structural Patterns)</item>
-        <item>行为型模式 (Behavioral Patterns)</item>
+        <item>01 创建型模式 (Creational Patterns)</item>
+        <item>02 结构型模式 (Structural Patterns)</item>
+        <item>03 行为型模式 (Behavioral Patterns)</item>
     </string-array>
 
-    <string-array name="index_patterns_creational">
-        <item>Singleton 单例模式</item>
-        <item>Factory Method 工厂方法模式</item>
-        <item>Abstract Factory 抽象工厂模式</item>
-        <item>Builder 建造者模式</item>
-        <item>Prototype 原型模式</item>
+    <string-array name="index_patterns_creational_01">
+        <item>01 Singleton 单例模式</item>
+        <item>02 Factory Method 工厂方法模式</item>
+        <item>03 Abstract Factory 抽象工厂模式</item>
+        <item>04 Builder 建造者模式</item>
+        <item>05 Prototype 原型模式</item>
     </string-array>
 
     <string-array name="index_patterns_creational_singleton">
@@ -29,20 +29,28 @@
         <item>静态内部类实现的懒汉式（推荐）</item>
     </string-array>
 
-    <string-array name="index_patterns_structural">
-        <item>Singleton 单例模式</item>
-        <item>Factory Method 工厂方法模式</item>
-        <item>Abstract Factory 抽象工厂模式</item>
-        <item>Builder 建造者模式</item>
-        <item>Prototype 原型模式</item>
+    <string-array name="index_patterns_structural_02">
+        <item>06 Adapter 适配器模式</item>
+        <item>07 Bridge 桥接模式</item>
+        <item>08 Composite 组合模式</item>
+        <item>09 Decorator 装饰模式</item>
+        <item>10 Facade 外观模式</item>
+        <item>11 Flyweight 享元模式</item>
+        <item>12 Proxy 代理模式</item>
     </string-array>
 
 
-    <string-array name="index_patterns_behavioral">
-        <item>Singleton 单例模式</item>
-        <item>Factory Method 工厂方法模式</item>
-        <item>Abstract Factory 抽象工厂模式</item>
-        <item>Builder 建造者模式</item>
-        <item>Prototype 原型模式</item>
+    <string-array name="index_patterns_behavioral_03">
+        <item>13 Chain of Responsibility 责任链模式</item>
+        <item>14 Command 命令模式</item>
+        <item>15 Interpreter 解释器模式</item>
+        <item>16 Iterator 迭代器模式</item>
+        <item>17 Mediator 中介者模式</item>
+        <item>18 Memento 备忘录模式</item>
+        <item>19 Observer 观察者模式</item>
+        <item>20 State 状态模式</item>
+        <item>21 Strategy 策略模式</item>
+        <item>22 Template Method 模板方法模式</item>
+        <item>23 Visitor 访问者模式</item>
     </string-array>
 </resources>

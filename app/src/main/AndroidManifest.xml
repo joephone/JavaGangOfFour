@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AidlTest"
+        android:theme="@style/Theme.GangOfFour"
         tools:targetApi="31">
         <activity
             android:name=".main.MainActivity"
@@ -28,21 +28,21 @@
         </activity>
 
         <activity
-            android:name=".creational.MainCreationalActivity"
+            android:name="._01_creational.MainCreationalActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".creational.singleton.MainSingletonActivity"
+            android:name="._01_creational.singleton.MainSingletonActivity"
             android:screenOrientation="portrait" />
 
 
 
         <activity
-            android:name=".structural.MainStructuralActivity"
+            android:name="._02_structural.MainStructuralActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".behavioral.MainBehavioralActivity"
+            android:name="._03_behavioral.MainBehavioralActivity"
             android:screenOrientation="portrait" />
     </application>
 

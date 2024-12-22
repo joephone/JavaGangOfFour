@@ -1,4 +1,4 @@
-package com.transcendence.gangoffour.behavioral;
+package com.transcendence.gangoffour._01_creational;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,19 +16,17 @@ import com.transcendence.gangoffour.utils.StringUtils;
 import java.util.List;
 
 /**
- * @author Joephone on 2024/12/1 0:46
+ * @author Joephone on 2024/12/1 0:38
  * @E-Mail Address：joephonechen@gmail.com
- * @Desc 行为型模式
+ * @Desc 创建型模式
  * @Edition 1.0
  * @EditionHistory
  */
 
-public class MainBehavioralActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class MainCreationalActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private final String TAG = "wan";
-
     private ArrayAdapter<String> adapter;
     private ListView lvIndex;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,7 @@ public class MainBehavioralActivity extends AppCompatActivity implements Adapter
         setContentView(R.layout.activity_main);
         lvIndex = findViewById(R.id.lvIndex);
 
-        List<String> items = StringUtils.getStringListAndIndex(this,R.array.index_patterns_creational);
+        List<String> items = StringUtils.getStringListAndIndex(this,R.array.index_patterns_creational_01);
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,items);
 
         lvIndex.setAdapter(adapter);
@@ -48,7 +46,7 @@ public class MainBehavioralActivity extends AppCompatActivity implements Adapter
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent();
-        intent.setClass(this, AppConstantValue.mainPatterns[position]);
+        intent.setClass(this, AppConstantValue.mainPatternsCreational[position]);
         startActivity(intent);
     }
 }

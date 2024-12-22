@@ -1,13 +1,13 @@
 package com.transcendence.gangoffour.main;
 
-import com.transcendence.gangoffour.behavioral.MainBehavioralActivity;
-import com.transcendence.gangoffour.creational.MainCreationalActivity;
-import com.transcendence.gangoffour.creational.singleton.MainSingletonActivity;
-import com.transcendence.gangoffour.creational.singleton.SingletonEager;
-import com.transcendence.gangoffour.creational.singleton.SingletonLazy;
-import com.transcendence.gangoffour.creational.singleton.SingletonLazyStaticInnerClass;
-import com.transcendence.gangoffour.creational.singleton.SingletonLazyThreadSafe;
-import com.transcendence.gangoffour.structural.MainStructuralActivity;
+import com.transcendence.gangoffour._03_behavioral.MainBehavioralActivity;
+import com.transcendence.gangoffour._01_creational.MainCreationalActivity;
+import com.transcendence.gangoffour._01_creational.singleton.MainSingletonActivity;
+import com.transcendence.gangoffour._01_creational.singleton.SingletonEager;
+import com.transcendence.gangoffour._01_creational.singleton.SingletonLazy;
+import com.transcendence.gangoffour._01_creational.singleton.SingletonLazyStaticInnerClass;
+import com.transcendence.gangoffour._01_creational.singleton.SingletonLazyThreadSafe;
+import com.transcendence.gangoffour._02_structural.MainStructuralActivity;
 
 public interface AppConstantValue {
 
