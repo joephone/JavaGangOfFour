@@ -9,9 +9,9 @@
 
 
     <string-array name="index_patterns">
-        <item>01 创建型模式 (Creational Patterns)</item>
-        <item>02 结构型模式 (Structural Patterns)</item>
-        <item>03 行为型模式 (Behavioral Patterns)</item>
+        <item>创建型模式 (Creational Patterns)</item>
+        <item>结构型模式 (Structural Patterns)</item>
+        <item>行为型模式 (Behavioral Patterns)</item>
     </string-array>
 
     <string-array name="index_patterns_creational_01">
