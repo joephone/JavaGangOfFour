@@ -1,6 +1,8 @@
 package com.transcendence.gangoffour._01_creational.singleton;
 
 
+import com.transcendence.gangoffour.log.LogUtils;
+
 /**
  * @author Joephone on 2024/12/1 1:12
  * @E-Mail Address：joephonechen@gmail.com
@@ -28,7 +30,7 @@ public class SingletonEager {
 
     // 其他业务方法
     public void doSomething() {
-        System.out.println("Doing something in 饿汉式");
+        LogUtils.d("Doing something in 饿汉式");
     }
 
 }

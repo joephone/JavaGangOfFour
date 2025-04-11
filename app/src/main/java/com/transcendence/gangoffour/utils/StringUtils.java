@@ -32,7 +32,6 @@ public class StringUtils {
             }
         }
         return mInstance;
-
     }
 
 
