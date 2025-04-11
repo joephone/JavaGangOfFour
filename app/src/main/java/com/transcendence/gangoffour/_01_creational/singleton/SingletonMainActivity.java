@@ -22,8 +22,7 @@ import java.util.List;
  * @EditionHistory
  */
 
-public class MainSingletonActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    private final String TAG = "wan";
+public class SingletonMainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private ArrayAdapter<String> adapter;
     private ListView lvIndex;
     private TextView tvResult;
@@ -31,7 +30,7 @@ public class MainSingletonActivity extends AppCompatActivity implements AdapterV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mode);
         lvIndex = findViewById(R.id.lvIndex);
         tvResult = findViewById(R.id.tvResult);
 
@@ -46,9 +45,6 @@ public class MainSingletonActivity extends AppCompatActivity implements AdapterV
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//        Intent intent = new Intent();
-//        intent.setClass(this, AppConstantValue.mainPatternsCreationalSingleton[position]);
-//        startActivity(intent);
         switch (position){
             case 0:  // 饿汉式
                 SingletonEager.getInstance().doSomething();
@@ -56,6 +52,7 @@ public class MainSingletonActivity extends AppCompatActivity implements AdapterV
                 SingletonEager instance2 = SingletonEager.getInstance();
                 tvResult.setText(
                         "饿汉式:\n" +
+                        "final SingletonEager instance = new SingletonEager(); \n" +
                                 "Instance 1: " + instance1.hashCode() + "\n" +
                                 "Instance 2: " + instance2.hashCode()
                 );
@@ -65,6 +62,10 @@ public class MainSingletonActivity extends AppCompatActivity implements AdapterV
                 SingletonLazy instance4 = SingletonLazy.getInstance();
                 tvResult.setText(
                         "懒汉式（非线程安全）:\n" +
+                                "SingletonLazy instance; SingletonLazy getInstance() {\n" +
+                                "        if (instance == null) {\n" +
+                                "            instance = new SingletonLazy();\n" +
+                                "        } \n" +
                                 "Instance 3: " + instance3.hashCode() + "\n" +
                                 "Instance 4: " + instance4.hashCode()
                 );
@@ -85,6 +86,13 @@ public class MainSingletonActivity extends AppCompatActivity implements AdapterV
                 SingletonLazyStaticInnerClass.getInstance().doSomething();
                 tvResult.setText(
                         "静态内部类:\n" +
+                                "   private static class SingletonHolder {\n" +
+                                "        private static final SingletonLazyStaticInnerClass INSTANCE = new SingletonLazyStaticInnerClass();\n" +
+                                "    }\n" +
+                                "\n" +
+                                "    public static SingletonLazyStaticInnerClass getInstance() {\n" +
+                                "        return SingletonHolder.INSTANCE;\n" +
+                                "    } \n" +
                                 "Instance: " + SingletonLazyStaticInnerClass.getInstance().hashCode()
                 );
                 break;

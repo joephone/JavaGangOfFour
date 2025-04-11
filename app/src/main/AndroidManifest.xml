@@ -28,11 +28,11 @@
         </activity>
 
         <activity
-            android:name="._01_creational.MainCreationalActivity"
+            android:name="._01_creational.CreationalMainActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="._01_creational.singleton.MainSingletonActivity"
+            android:name="._01_creational.singleton.SingletonMainActivity"
             android:screenOrientation="portrait" />
 
 

@@ -23,8 +23,7 @@ import java.util.List;
  * @EditionHistory
  */
 
-public class MainCreationalActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    private final String TAG = "wan";
+public class CreationalMainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private ArrayAdapter<String> adapter;
     private ListView lvIndex;
 

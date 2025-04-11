@@ -16,7 +16,6 @@ import com.transcendence.gangoffour.utils.StringUtils;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    private final String TAG = "wan";
 
     private ArrayAdapter<String> adapter;
     private ListView lvIndex;
