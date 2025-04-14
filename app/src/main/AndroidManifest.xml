@@ -35,6 +35,9 @@
             android:name="._01_creational.singleton.SingletonMainActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name="._01_creational.factory.factorymethod.FactoryMethodShapeActivity"
+            android:screenOrientation="portrait" />
 
 
         <activity

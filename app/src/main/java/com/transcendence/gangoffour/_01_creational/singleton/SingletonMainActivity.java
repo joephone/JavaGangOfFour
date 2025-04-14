@@ -33,6 +33,7 @@ public class SingletonMainActivity extends AppCompatActivity implements AdapterV
         setContentView(R.layout.activity_mode);
         lvIndex = findViewById(R.id.lvIndex);
         tvResult = findViewById(R.id.tvResult);
+        tvResult.setVisibility(View.INVISIBLE);
 
         List<String> items = StringUtils.getStringListAndIndex(this,R.array.index_patterns_creational_singleton);
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,items);
@@ -45,6 +46,7 @@ public class SingletonMainActivity extends AppCompatActivity implements AdapterV
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        tvResult.setVisibility(View.VISIBLE);
         switch (position){
             case 0:  // 饿汉式
                 SingletonEager.getInstance().doSomething();
@@ -53,6 +55,9 @@ public class SingletonMainActivity extends AppCompatActivity implements AdapterV
                 tvResult.setText(
                         "饿汉式:\n" +
                         "final SingletonEager instance = new SingletonEager(); \n" +
+                                "public static SingletonEager getInstance() { \n" +
+                                    "return instance;   \n" +
+                                "} \n" +
                                 "Instance 1: " + instance1.hashCode() + "\n" +
                                 "Instance 2: " + instance2.hashCode()
                 );
@@ -62,7 +67,8 @@ public class SingletonMainActivity extends AppCompatActivity implements AdapterV
                 SingletonLazy instance4 = SingletonLazy.getInstance();
                 tvResult.setText(
                         "懒汉式（非线程安全）:\n" +
-                                "SingletonLazy instance; SingletonLazy getInstance() {\n" +
+                                "private static SingletonLazy instance; " +
+                                "   public static SingletonLazy getInstance() {\n" +
                                 "        if (instance == null) {\n" +
                                 "            instance = new SingletonLazy();\n" +
                                 "        } \n" +
@@ -83,18 +89,18 @@ public class SingletonMainActivity extends AppCompatActivity implements AdapterV
                 }
                 break;
             case 3: // 静态内部类
-                SingletonLazyStaticInnerClass.getInstance().doSomething();
-                tvResult.setText(
+                String codeBlock =
                         "静态内部类:\n" +
-                                "   private static class SingletonHolder {\n" +
-                                "        private static final SingletonLazyStaticInnerClass INSTANCE = new SingletonLazyStaticInnerClass();\n" +
-                                "    }\n" +
-                                "\n" +
+                                "    private static class SingletonHolder {\n" +
+                                "        private static final SingletonLazyStaticInnerClass INSTANCE =\n" +
+                                "            new SingletonLazyStaticInnerClass();\n" +
+                                "    }\n\n" +
                                 "    public static SingletonLazyStaticInnerClass getInstance() {\n" +
                                 "        return SingletonHolder.INSTANCE;\n" +
-                                "    } \n" +
-                                "Instance: " + SingletonLazyStaticInnerClass.getInstance().hashCode()
-                );
+                                "    }\n\n" +
+                                "Instance Hash: " + SingletonLazyStaticInnerClass.getInstance().hashCode();
+
+                tvResult.setText(codeBlock);
                 break;
         }
     }
