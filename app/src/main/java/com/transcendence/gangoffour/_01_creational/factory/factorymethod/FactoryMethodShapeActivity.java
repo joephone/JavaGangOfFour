@@ -18,7 +18,7 @@ public class FactoryMethodShapeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mode_factory_method);
+        setContentView(R.layout.activity_pattern_factory_method);
 
         FrameLayout container = findViewById(R.id.fl_container);
 
