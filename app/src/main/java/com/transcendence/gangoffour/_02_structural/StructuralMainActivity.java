@@ -23,8 +23,8 @@ import java.util.List;
  * @EditionHistory
  */
 
-public class MainStructuralActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    private final String TAG = "wan";
+public class StructuralMainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+
     private ArrayAdapter<String> adapter;
     private ListView lvIndex;
 
@@ -46,7 +46,7 @@ public class MainStructuralActivity extends AppCompatActivity implements Adapter
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent();
-        intent.setClass(this, AppConstantValue.mainPatterns[position]);
+        intent.setClass(this, AppConstantValue.mainPatternsStructural[position]);
         startActivity(intent);
     }
 }

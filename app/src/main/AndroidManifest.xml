@@ -51,7 +51,15 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="._02_structural.MainStructuralActivity"
+            android:name="._02_structural.StructuralMainActivity"
+            android:screenOrientation="portrait" />
+        <!-- adapter模式 -->
+        <activity
+            android:name="._02_structural.adapterpattern.AdapterPatternActivity"
+            android:screenOrientation="portrait" />
+        <!-- bridge模式 -->
+        <activity
+            android:name="._02_structural.bridge.BridgePatternActivity"
             android:screenOrientation="portrait" />
 
         <activity
