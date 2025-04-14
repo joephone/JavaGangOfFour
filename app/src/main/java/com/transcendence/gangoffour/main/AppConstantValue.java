@@ -3,6 +3,7 @@ package com.transcendence.gangoffour.main;
 import com.transcendence.gangoffour._01_creational.builder.BuilderActivity;
 import com.transcendence.gangoffour._01_creational.factory.abstractfactory.AbstractFactoryActivity;
 import com.transcendence.gangoffour._01_creational.factory.factorymethod.FactoryMethodShapeActivity;
+import com.transcendence.gangoffour._01_creational.prototype.PrototypeActivity;
 import com.transcendence.gangoffour._03_behavioral.MainBehavioralActivity;
 import com.transcendence.gangoffour._01_creational.CreationalMainActivity;
 import com.transcendence.gangoffour._01_creational.singleton.SingletonMainActivity;
@@ -26,6 +27,7 @@ public interface AppConstantValue {
             FactoryMethodShapeActivity.class,
             AbstractFactoryActivity.class,
             BuilderActivity.class,
+            PrototypeActivity.class,
     };
 
     Class[] mainPatternsCreationalSingleton = {

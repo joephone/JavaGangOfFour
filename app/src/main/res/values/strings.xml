@@ -53,4 +53,11 @@
         <item>22 Template Method 模板方法模式</item>
         <item>23 Visitor 访问者模式</item>
     </string-array>
+
+
+    <string-array name="shape_types">
+        <item>Circle</item>
+        <item>Square</item>
+        <item>Triangle</item>
+    </string-array>
 </resources>
