@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.transcendence.gangoffour.main.AppConstantValue;
 import com.transcendence.gangoffour.R;
+import com.transcendence.gangoffour.main.BaseActivity;
+import com.transcendence.gangoffour.main.TitleBarActivity;
 import com.transcendence.gangoffour.utils.StringUtils;
 
 import java.util.List;
@@ -23,15 +25,21 @@ import java.util.List;
  * @EditionHistory
  */
 
-public class StructuralMainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class StructuralMainActivity extends TitleBarActivity implements AdapterView.OnItemClickListener {
 
     private ArrayAdapter<String> adapter;
     private ListView lvIndex;
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initViews() {
+        setTitle("结构型模式");
         lvIndex = findViewById(R.id.lvIndex);
 
         List<String> items = StringUtils.getStringListAndIndex(this,R.array.index_patterns_structural_02);
@@ -39,7 +47,6 @@ public class StructuralMainActivity extends AppCompatActivity implements Adapter
 
         lvIndex.setAdapter(adapter);
         lvIndex.setOnItemClickListener(this);
-
     }
 
 

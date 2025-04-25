@@ -9,8 +9,11 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.transcendence.gangoffour.log.LogUtils;
 import com.transcendence.gangoffour.main.AppConstantValue;
 import com.transcendence.gangoffour.R;
+import com.transcendence.gangoffour.main.BaseActivity;
+import com.transcendence.gangoffour.main.TitleBarActivity;
 import com.transcendence.gangoffour.utils.StringUtils;
 
 import java.util.List;
@@ -23,14 +26,21 @@ import java.util.List;
  * @EditionHistory
  */
 
-public class CreationalMainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class CreationalMainActivity extends TitleBarActivity implements AdapterView.OnItemClickListener {
     private ArrayAdapter<String> adapter;
     private ListView lvIndex;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initViews() {
+        setTitle("创建型模式");
+        // 调试状态栏高度
+        LogUtils.d("TitleBarDebug", "StatusBar height: " + getStatusBarHeight());
         lvIndex = findViewById(R.id.lvIndex);
 
         List<String> items = StringUtils.getStringListAndIndex(this,R.array.index_patterns_creational_01);
@@ -38,7 +48,6 @@ public class CreationalMainActivity extends AppCompatActivity implements Adapter
 
         lvIndex.setAdapter(adapter);
         lvIndex.setOnItemClickListener(this);
-
     }
 
 

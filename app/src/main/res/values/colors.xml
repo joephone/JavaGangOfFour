@@ -9,4 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="colorLine">#ECECEC</color>
+
+    <!-- github -->
+    <color name="colorGitHubBlack">#24292E</color>
+    <color name="colorGitHubBlackPress">#6a737d</color>
+    <color name="colorGitHubGreen">#06C383</color>
+    <color name="colorGitHubGreenPress">#208738</color>
 </resources>

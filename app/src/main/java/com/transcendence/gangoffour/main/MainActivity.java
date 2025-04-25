@@ -15,16 +15,19 @@ import com.transcendence.gangoffour.utils.StringUtils;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class MainActivity extends TitleBarActivity implements AdapterView.OnItemClickListener {
 
     private ArrayAdapter<String> adapter;
     private ListView lvIndex;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initViews() {
         lvIndex = findViewById(R.id.lvIndex);
 
         List<String> items = StringUtils.getStringListAndIndex(this,R.array.index_patterns);
@@ -32,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         lvIndex.setAdapter(adapter);
         lvIndex.setOnItemClickListener(this);
-
     }
 
 
